@@ -2,7 +2,7 @@ import React from 'react'
 import {Navbar, Nav, Container} from 'react-bootstrap'
 import {FaShoppingCart, FaUser} from "react-icons/fa"
 
-const Header = () => {
+const header = () => {
   return (
     <header>
         <Navbar bg='dark' variant='dark' expand="lg" collapseOnSelect>
@@ -21,4 +21,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default header
