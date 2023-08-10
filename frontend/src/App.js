@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import Header from "./components/header"
+import Footer from "./components/footer"
 const App = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const App = () => {
           <h1>Welcome to ProShop</h1>
         </Container>
       </main>
+      <Footer/>
     </>
   )
 }
