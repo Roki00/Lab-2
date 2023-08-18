@@ -8,7 +8,7 @@ import {useSelector} from 'react-redux'
 const Header = () => {
 
     const { cartItems } = useSelector((state) => state.cart);
-   // console.log(cartItems); //kqyre qetu te video kur e teston (video 5 min 2:40) spo na qet qat array dicka mapi spo lexohet
+    // console.log(cartItems)//kqyre qetu te video kur e teston (video 5 min 2:40) spo na qet qat array dicka mapi spo lexohet
 
   return (
     <header>

@@ -14,6 +14,8 @@ import './assets/styles/bootstrap.customs.css';
 import App from './App';
 import Home from "./screens/home"
 import ProductScreen from "./screens/productScreen"
+import CartScreen from "./screens/cartScreen.js"
+
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter(
@@ -21,6 +23,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<Home/>}/>
       <Route path='/product/:id' element={<ProductScreen/>}/>
+      <Route path='/cart' element={<CartScreen/>} />
     </Route>
   )
 )
