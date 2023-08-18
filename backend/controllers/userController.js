@@ -9,7 +9,7 @@ import User from "../models/userModel.js"
 const authUser = asyncHandler(async (req, res ) => {
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email});     //ketu testojme a po pershtaten email apo a exist
+    const user = await User.findOne({email});     //ketu testojme a po pershtaten email apo a exist
 
 
     if(user && (await user.matchPassword(password))){  //matchPassword eshte funks qe e kemi kriju per me i compare passat

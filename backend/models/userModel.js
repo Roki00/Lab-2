@@ -25,7 +25,7 @@ const userShema = new mongoose.Schema({
 });
 
 //ketu e bojm passwordin bcrypt qe me mujt me i compare me passin qe shkruajm
-userSchema.methods.matchPassword = async function (enteredPassword){
+userShema.methods.matchPassword = async function (enteredPassword){
     return await bcrypt.compare(enteredPassword, this.password);
 
 };
