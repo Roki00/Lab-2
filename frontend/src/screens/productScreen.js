@@ -4,7 +4,7 @@ import {useParams, useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Form, Row,Col,Image,ListGroup,Card,Button, ListGroupItem } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import Rating from '../components/rating';
+import Rating from '../components/Rating';
 import { useGetProductDetailsQuery } from '../slices/productsApiSlice.js';
 import Loader from '../components/Loader';
 import Message from '../components/Message';

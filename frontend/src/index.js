@@ -12,7 +12,7 @@ import store from './store.js';
 import './assets/styles/index.css';
 import './assets/styles/bootstrap.customs.css';
 import App from './App';
-import Home from "./screens/home"
+import Home from "./screens/Home.js"
 import ProductScreen from "./screens/productScreen"
 import CartScreen from "./screens/cartScreen.js"
 
