@@ -1,5 +1,5 @@
 import React from 'react'
-import {Badge, Navbar, Nav, Container} from 'react-bootstrap'
+import {Badge, Navbar, Nav, Container, NavDropdown} from 'react-bootstrap'
 import {FaShoppingCart, FaUser} from "react-icons/fa"
 import {LinkContainer} from "react-router-bootstrap"
 import logo from "../assets/logo.png"
@@ -9,6 +9,11 @@ const Header = () => {
 
     const { cartItems } = useSelector((state) => state.cart);
     // console.log(cartItems)//kqyre qetu te video kur e teston (video 5 min 2:40) spo na qet qat array dicka mapi spo lexohet
+    const { userInfo } = useSelector((state) => state.auth);
+
+    const logouthandler = () => {
+        console.log('logouthandler');
+    };  
 
   return (
     <header>
@@ -35,9 +40,21 @@ const Header = () => {
                             }
                             </Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/login">
-                            <Nav.Link><FaUser/>Sign in</Nav.Link>
-                        </LinkContainer>
+                            {userInfo ? (
+                                <NavDropdown title = {userInfo.name} id='username'>
+                                    <LinkContainer to='/profile'>
+                                        <NavDropdown.Item>Profile</NavDropdown.Item>
+                                    </LinkContainer>
+                                        <NavDropdown.Item onClick={logouthandler}>
+                                            Logout
+                                        </NavDropdown.Item>
+                                </NavDropdown>
+                            ) : (
+                                <LinkContainer to='/login'>
+                                <Nav.Link href = '/login'><FaUser/> Sign in </Nav.Link>
+                            </LinkContainer>
+                            ) }
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
