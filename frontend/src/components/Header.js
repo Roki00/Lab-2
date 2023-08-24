@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {Badge, Navbar, Nav, Container, NavDropdown} from 'react-bootstrap'
 import {FaShoppingCart, FaUser} from "react-icons/fa"
 import {LinkContainer} from "react-router-bootstrap"
 import logo from "../assets/logo.png"
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import { useLogoutMutation } from '../slices/usersApiSlice'
+import { logout } from '../slices/authSlice'
 
 const Header = () => {
 
@@ -11,8 +14,19 @@ const Header = () => {
     // console.log(cartItems)//kqyre qetu te video kur e teston (video 5 min 2:40) spo na qet qat array dicka mapi spo lexohet
     const { userInfo } = useSelector((state) => state.auth);
 
-    const logouthandler = () => {
-        console.log('logouthandler');
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [logoutApiCall] = useLogoutMutation();
+
+    const logouthandler = async () => {
+        try{
+            await logoutApiCall().unwrap();
+            dispatch(logout());
+            navigate('/login');
+        }catch(err){
+            console.log(err);
+        }
     };  
 
   return (

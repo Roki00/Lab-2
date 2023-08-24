@@ -12,12 +12,16 @@ import store from './store.js';
 import './assets/styles/index.css';
 import './assets/styles/bootstrap.customs.css';
 import App from './App';
+import reportWebVitals from './reportWebVitals';  
+import PrivateRoute from './components/PrivateRoute.js';
 import Home from "./screens/Home.js"
 import ProductScreen from "./screens/productScreen"
 import CartScreen from "./screens/cartScreen.js"
 import LoginScreen from './screens/LoginScreen.js';
+import RegisterScreen from './screens/RegisterScreen.js';
+import ShippingScreen from './screens/ShippingScreen.js';
 
-import reportWebVitals from './reportWebVitals';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,7 +30,13 @@ const router = createBrowserRouter(
       <Route path='/product/:id' element={<ProductScreen/>}/> 
       <Route path='/cart' element={<CartScreen/>} />
       <Route path='/login' element={<LoginScreen/>} />
-    </Route>
+      <Route path='/register' element={<RegisterScreen/>} />
+     
+
+      <Route path='' element={<PrivateRoute/>}>
+          <Route path='/shipping' element={<ShippingScreen/>} /> 
+        </Route> 
+      </Route>
   )
 )
 const root = ReactDOM.createRoot(document.getElementById('root'));
