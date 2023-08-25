@@ -3,12 +3,12 @@ import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button, Row, Col, ListGroup, Image, Card, ListGroupItem } from 'react-bootstrap'
-import {toast} from "react-toastify"
-import CheckoutSteps from '../components/CheckoutSteps'
-import Message from '../components/Message'
-import Loader from '../components/Loader'
-import { useCreateOrderMutation } from '../slices/ordersApiSlice'
-import { clearCartItems } from '../slices/cartSlice'
+import { toast } from "react-toastify"
+import CheckoutSteps from '../components/CheckoutSteps.js'
+import Message from '../components/Message.js'
+import Loader from '../components/Loader.js'
+import { useCreateOrderMutation } from '../slices/ordersApiSlice.js'
+import { clearCartItems } from '../slices/cartSlice.js'
 
 const PlaceOrderScreen = () => {
 

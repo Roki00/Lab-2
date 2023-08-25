@@ -4,9 +4,9 @@ import { Row, Col, ListGroup, Image, Form, Button, Card} from 'react-bootstrap'
 import {toast} from 'react-toastify'
 import { useSelector } from 'react-redux'
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js'
-import Message from '../components/Message'
-import Loader from '../components/Loader'
-import { useGetOrderDetailsQuery, usePayOrderMutation, useGetPayPalClientIdQuery } from '../slices/ordersApiSlice'
+import Message from '../components/Message.js'
+import Loader from '../components/Loader.js'
+import { useGetOrderDetailsQuery, usePayOrderMutation, useGetPayPalClientIdQuery } from '../slices/ordersApiSlice.js'
 
 
 const OrderScreen = () => {

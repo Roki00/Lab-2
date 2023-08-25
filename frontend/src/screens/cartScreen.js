@@ -3,8 +3,8 @@ import {Link, useNavigate} from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import {Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem} from "react-bootstrap"
 import {FaTrash} from "react-icons/fa"
-import Message from "../components/Message"
-import {addToCart, removeFromCart} from "../slices/cartSlice"
+import Message from "../components/Message.js"
+import {addToCart, removeFromCart} from "../slices/cartSlice.js"
 
 
 

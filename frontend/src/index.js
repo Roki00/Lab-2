@@ -12,11 +12,11 @@ import store from './store.js';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/index.css';
 import './assets/styles/bootstrap.customs.css';
-import App from './App';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';  
 import PrivateRoute from './components/PrivateRoute.js';
 import Home from "./screens/Home.js"
-import ProductScreen from "./screens/productScreen"
+import ProductScreen from "./screens/productScreen.js"
 import CartScreen from "./screens/cartScreen.js"
 import LoginScreen from './screens/LoginScreen.js';
 import RegisterScreen from './screens/RegisterScreen.js';

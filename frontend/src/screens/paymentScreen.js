@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {Form, Button, Col } from "react-bootstrap"
-import FormContainer from "../components/FormContainer"
-import CheckoutSteps from "../components/CheckoutSteps"
-import { savePaymentMethod } from '../slices/cartSlice'
+import FormContainer from "../components/FormContainer.js"
+import CheckoutSteps from "../components/CheckoutSteps.js"
+import { savePaymentMethod } from '../slices/cartSlice.js'
 
 const PaymentScreen = () => {
 
