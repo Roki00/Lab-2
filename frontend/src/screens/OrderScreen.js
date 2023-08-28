@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Link, useParams} from 'react-router-dom'
-import { Row, Col, ListGroup, Image, Card, Button, ListGroupItem} from 'react-bootstrap'
+import { Row, Col, ListGroup, Image, Card, Button} from 'react-bootstrap'
 import {toast} from 'react-toastify'
 import { useSelector } from 'react-redux'
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js'
@@ -202,10 +202,10 @@ const OrderScreen = () => {
                                     {isPending ? (
                                     <Loader/> ) : (
                                         <div>
-                                            {/*<Button onClick={onApproveTest} 
+                                            {<Button onClick={onApproveTest} 
                                             style= {{ marginBottom: '10px' }}>
                                                 Test Pay Order 
-                                            </Button> */}
+                                            </Button> }
                                             <div>
                                             <PayPalButtons
                                                 createOrder={createOrder}
