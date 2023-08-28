@@ -8,7 +8,7 @@ import {toast} from "react-toastify"
 import { useUpdateProductMutation,useGetProductDetailsQuery } from '../../slices/productsApiSlice.js'
 
 const ProductEditScreen = () => {
-    const {_id:productId} = useParams()
+    const {id:productId} = useParams()
 
     const [name,setName] = useState("")
     const [price,setPrice] = useState(0)
@@ -18,7 +18,7 @@ const ProductEditScreen = () => {
     const [countInStock,setCountInStock] = useState(0)
     const [description, setDescription] = useState("")
 
-    const {data:product, isLoading, refetch, error} =useGetProductDetailsQuery(productId) 
+    const {data:product, isLoading, error} =useGetProductDetailsQuery(productId) 
 
     const [updateProduct, {isLoading:loadingUpdate}] = useUpdateProductMutation()
 
