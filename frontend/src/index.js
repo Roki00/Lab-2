@@ -30,12 +30,14 @@ import OrderListScreen from "./screens/admin/OrderListScreen.js"
 import ProductListScreen from './screens/admin/ProductListScreen.js';
 import ProductEditScreen from './screens/admin/ProductEditScreen.js';
 import UserListScreen from './screens/admin/UserListScreen.js';
+import UserEditScreen from './screens/admin/UserEditScreen.js';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<Home/>}/>
+      <Route path='/page/:pageNumber' element={<Home/>}/>
       <Route path='/product/:id' element={<ProductScreen/>}/> 
       <Route path='/cart' element={<CartScreen/>} />
       <Route path='/login' element={<LoginScreen/>} />
@@ -53,13 +55,14 @@ const router = createBrowserRouter(
         <Route path='' element={<AdminRoute/>}>
           <Route path='/admin/orderlist' element={<OrderListScreen/>} /> 
           <Route path='/admin/productlist' element={<ProductListScreen/>} /> 
+          <Route path='/admin/productlist/:pageNumber' element={<ProductListScreen/>}/> 
           <Route path='/admin/product/:id/edit' element={<ProductEditScreen/>}/>
           <Route path='/admin/userlist' element={<UserListScreen/>}/>
-        </Route> 
-        
+          <Route path='/admin/user/:id/edit' element={<UserEditScreen/>}/>
+        </Route>  
       </Route>
   )
-)
+);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
