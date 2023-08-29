@@ -22,7 +22,7 @@ const ProductCarousel = () => {
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
-      ))}
+      ))};
     </Carousel>
   );
 };
