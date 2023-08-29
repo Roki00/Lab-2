@@ -5,6 +5,7 @@ import Product from '../components/Product.js'
 import Loader from '../components/Loader.js'
 import Message from '../components/Message.js'
 import Paginate from '../components/Paginate.js'
+import ProductCarousel from '../components/ProductCarousel.js'
 import { useGetProductsQuery } from '../slices/productsApiSlice.js'
 
 
@@ -14,7 +15,7 @@ const Home = () => {
   const{ data, isLoading, error } = useGetProductsQuery({ keyword,pageNumber });
   return (
     <>
-      {keyword && 
+      {!keyword ? <ProductCarousel/> :
       <Link to="/" className='btn btn-light mb-4' > 
         Go Back
       </Link>}
